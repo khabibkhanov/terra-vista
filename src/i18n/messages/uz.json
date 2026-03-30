@@ -1,0 +1,161 @@
+{
+	"header": {
+		"brand": "Terra Vista",
+		"phone": "+9989912345667",
+		"nav": {
+			"home": "Asosiy",
+			"about": "Biz haqida",
+			"projects": "Loyihalar",
+			"services": "Xizmatlar"
+		},
+		"contact": "Biz bilan bog‘laning",
+		"menu": "Menyu",
+		"closeMenu": "Menyuni yopish",
+		"openMenu": "Menyuni ochish"
+	},
+	"hero": {
+		"badge": "85% mijozlar tavsiya orqali keladi",
+		"heading": "Yashashni ||highlight||istaydigan||/highlight|| joylarni yaratamiz",
+		"description": "Terra Vista — arxitektura, ekologiya va uzoq muddatli qiymatga e’tibor qaratgan turar joy ko‘chmas mulk ishlab chiqaruvchisi.",
+		"cta": "Maslahat olish",
+		"desktopCta": "Bepul maslahat olish",
+		"tagline": "2010 yildan beri yaxshi hayot uchun ishlaymiz.",
+		"floatingCards": [
+			"85% mijozlar tavsiya orqali keladi",
+			"Jamoamizda 40+ me’mor va muhandis",
+			"10+ loyiha ishlab chiqilmoqda"
+		]
+	},
+	"about": {
+		"badge": "Xolding haqida",
+		"content": [
+			"Terra Vista — me’morlar, muhandislar va ishlab chiqaruvchilar jamoasi. Bizning asosiy maqsadimiz — vaqt o‘tishi bilan qiymatini saqlab qoladigan turar joy maydonlarini yaratish.",
+			"Biz shunchaki bino qurmaymiz — biz har bir detallari o‘ylangan muhit yaratamiz: rejalashtirishdan tortib infratuzilma va obodonlashtirishgacha."
+		]
+	},
+	"stats": {
+		"projects": {
+			"value": "25+",
+			"label": "Tugallangan loyihalar"
+		},
+		"area": {
+			"value": "500+",
+			"label": "ming m² qurilgan"
+		},
+		"timeline": {
+			"value": "98%",
+			"label": "Vaqtida tugallangan loyihalar"
+		},
+		"experience": {
+			"value": "15+",
+			"label": "Bozordagi tajriba"
+		}
+	},
+	"services": {
+		"badge": "Biz nima qilamiz",
+		"heading": "Xizmatlarimiz",
+		"mobileDescription": "Biz biznes uchun ishonchli, nazoratli va bashorat qilinadigan qurilish yechimlarini taklif etamiz.",
+		"desktopDescription": "Biz butun tsiklni o‘z zimamizga olamiz — g‘oyadan tayyor maydongacha, natija yaxlit va puxta o‘ylangan bo‘lishi uchun.",
+		"items": [
+			{
+				"title": "Turar joy loyihalarini ishlab chiqish",
+				"description": "Biz kontseptsiya yaratamiz, bozorni tahlil qilamiz va yillar davomida qiymatini saqlaydigan loyihalarni amalga oshiramiz."
+			},
+			{
+				"title": "Arxitektura loyihalash",
+				"description": "Biz estetika, funksionallik va atrof-muhitni hisobga olgan holda binolarni loyihalaymiz."
+			},
+			{
+				"title": "Qurilish boshqaruvi",
+				"description": "Biz har bir bosqichni nazorat qilamiz va muddatlar, byudjet hamda sifat standartlariga to‘liq rioya qilinishini ta’minlaymiz."
+			}
+		]
+	},
+	"approach": {
+		"badge": "Yondashuvimiz",
+		"heading": "Bizning yondashuv",
+		"description": "Har bir loyiha — bu g‘oya va har bir bosqichdagi aniq ijro bir-biriga mos keladigan yaxlit tizim.",
+		"steps": [
+			{
+				"num": "1.",
+				"title": "Strategiya va kontseptsiya",
+				"description": "Biz joylashuv, auditoriya va loyiha potensialini chuqur tahlil qilib, asosni yaratamiz."
+			},
+			{
+				"num": "2.",
+				"title": "Loyihalash va tafsilotlar",
+				"description": "Amaliylik, estetika va chidamlilikni hisobga olgan holda arxitektura va muhandislik yechimlarini ishlab chiqamiz."
+			},
+			{
+				"num": "3.",
+				"title": "Amalga oshirish va nazorat",
+				"description": "Qurilishning har bir bosqichini to‘liq nazorat qilamiz, natija dastlabki g‘oyaga to‘liq mos kelishi uchun."
+			}
+		]
+	},
+	"gallery": {
+		"heading": "Loyihalar galereyasi",
+		"description": "Bizning jamoa tomonidan amalga oshirilgan haqiqiy loyihalar — xususiy uylardan tortib savdo binolarigacha. Har biri sifat, muddat va yondashuvimizning amaliy isbotidir."
+	},
+	"whyUs": {
+		"badge": "Nima uchun bizni tanlaysiz",
+		"heading": "Nima uchun Terra Vista?",
+		"reasons": [
+			{
+				"num": "01",
+				"title": "Maqsadli arxitektura",
+				"description": "Har bir loyiha kuchli kontseptsiyaga asoslanadi, oddiy texnik yechimlar to‘plami emas."
+			},
+			{
+				"num": "02",
+				"title": "Uzoq muddatli qiymatga e’tibor",
+				"description": "Biz faqat topshirish haqida emas, balki loyihaning 5–10 yildan keyingi qiymati haqida ham o‘ylaymiz."
+			},
+			{
+				"num": "03",
+				"title": "Har bosqichda to‘liq nazorat",
+				"description": "Mas’uliyatni hech kimga o‘tkazmaymiz — oxirigacha o‘zimiz olib boramiz."
+			},
+			{
+				"num": "04",
+				"title": "Estetika va amaliylik muvozanati",
+				"description": "Biz nafaqat chiroyli, balki juda qulay va funksional joylarni yaratamiz."
+			},
+			{
+				"num": "05",
+				"title": "Kuchli professional jamoa",
+				"description": "Tajribali me’morlar, muhandislar va menejerlarimiz murakkab loyihalarni muammosiz va sifatli amalga oshiradi."
+			}
+		]
+	},
+	"location": {
+		"heading": "Bizning manzil",
+		"description": "Bizning ofis Toshkentda joylashgan. Shaxsiy va korporativ mijozlar bilan hamkorlikka ochiqmiz.",
+		"contacts": [
+			{
+				"title": "Toshkent",
+				"address": "Toshkent shahri, O‘zbekiston"
+			},
+			{
+				"title": "Telefon raqami",
+				"address": "+998 99 123 45 67"
+			}
+		]
+	},
+	"map": {
+		"loading": "Xarita yuklanmoqda…",
+		"popup": {
+			"title": "Terra Vista",
+			"address": "Toshkent shahri, O‘zbekiston"
+		}
+	},
+	"footer": {
+		"description": "Terra Vista — arxitektura, ekologiya va uzoq muddatli qiymatga e’tibor qaratgan turar joy ko‘chmas mulk ishlab chiqaruvchisi.",
+		"contactUs": "Biz bilan bog‘laning",
+		"address": "Toshkent shahri, O‘zbekiston",
+		"email": "info@terravista.uz",
+		"phone": "+998 99 123 45 67",
+		"followUs": "Bizni kuzatib boring",
+		"copyright": "© 2026 Terra Vista. Barcha huquqlar himoyalangan."
+	}
+}

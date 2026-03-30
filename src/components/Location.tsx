@@ -1,20 +1,25 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { IMG_ICON_LOCATION, IMG_ICON_PHONE } from "@/lib/assets";
 import Map from "./Map";
 
-const CONTACTS = [
-	{
-		icon: IMG_ICON_LOCATION,
-		title: "Toshkent",
-		address: "Toshkent shahri, O'zbekiston",
-	},
-	{
-		icon: IMG_ICON_PHONE,
-		title: "Номер телефона",
-		address: "+998 99 123 45 67",
-	},
-] as const;
-
 export default function Location() {
+	const t = useTranslations("location");
+
+	const CONTACTS = [
+		{
+			icon: IMG_ICON_LOCATION,
+			title: t("contacts.0.title"),
+			address: t("contacts.0.address"),
+		},
+		{
+			icon: IMG_ICON_PHONE,
+			title: t("contacts.1.title"),
+			address: t("contacts.1.address"),
+		},
+	] as const;
+
 	return (
 		<section className="px-4 lg:px-12 py-8">
 			<div className="max-w-[1312px] mx-auto flex flex-col gap-8">
@@ -23,12 +28,10 @@ export default function Location() {
 					{/* Heading */}
 					<div className="flex flex-col gap-5 lg:w-[560px] shrink-0">
 						<h2 className="font-[var(--font-figtree)] text-[36px] lg:text-[60px] text-[#07100b] tracking-[-1.08px] lg:tracking-[-1.8px] uppercase leading-tight lg:leading-[60px] lg:w-[553px]">
-							наше расположение
+							{t("heading")}
 						</h2>
 						<p className="font-[var(--font-montserrat)] text-[14px] lg:text-[16px] text-[#07100b] leading-[1.585]">
-							Наш офис расположен в Ташкенте. Мы открыты для
-							сотрудничества с частными и корпоративными
-							клиентами.
+							{t("description")}
 						</p>
 					</div>
 

@@ -1,11 +1,17 @@
-const STATS = [
-	{ value: "25+", label: "Реализованных проектов" },
-	{ value: "500+", label: "тыс. м² построено" },
-	{ value: "98%", label: "Завершённых проектов в срок" },
-	{ value: "15+", label: "Лет на рынке" },
-] as const;
+"use client";
+
+import { useTranslations } from "next-intl";
 
 export default function Stats() {
+	const t = useTranslations("stats");
+
+	const STATS = [
+		{ value: t("projects.value"), label: t("projects.label") },
+		{ value: t("area.value"), label: t("area.label") },
+		{ value: t("timeline.value"), label: t("timeline.label") },
+		{ value: t("experience.value"), label: t("experience.label") },
+	] as const;
+
 	return (
 		<section
 			className="px-4 py-8 lg:px-12"

@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import SectionBadge from "./SectionBadge";
 import {
 	IMG_SERVICE_1,
@@ -6,28 +9,27 @@ import {
 	IMG_SERVICE_3,
 } from "@/lib/assets";
 
-const SERVICES = [
-	{
-		icon: IMG_SERVICE_1,
-		title: "Девелопмент жилых проектов",
-		description:
-			"Мы создаём концепцию, анализируем рынок и реализуем проекты, которые сохраняют ценность и привлекательность на годы вперёд.",
-	},
-	{
-		icons: [IMG_SERVICE_2_A, IMG_SERVICE_2_B] as [string, string],
-		title: "Архитектурное проектирование",
-		description:
-			"Проектируем здания с учётом эстетики, функциональности и окружающей среды, создавая баланс между формой и содержанием.",
-	},
-	{
-		icon: IMG_SERVICE_3,
-		title: "Управление строительством",
-		description:
-			"Контролируем каждый этап реализации, обеспечивая соответствие срокам, бюджету и качественным стандартам.",
-	},
-] as const;
-
 export default function Services() {
+	const t = useTranslations("services");
+
+	const SERVICES = [
+		{
+			icon: IMG_SERVICE_1,
+			title: t("items.0.title"),
+			description: t("items.0.description"),
+		},
+		{
+			icons: [IMG_SERVICE_2_A, IMG_SERVICE_2_B] as [string, string],
+			title: t("items.1.title"),
+			description: t("items.1.description"),
+		},
+		{
+			icon: IMG_SERVICE_3,
+			title: t("items.2.title"),
+			description: t("items.2.description"),
+		},
+	] as const;
+
 	return (
 		<section
 			id="services"
@@ -36,22 +38,18 @@ export default function Services() {
 			<div className="max-w-[1344px] mx-auto flex flex-col gap-8 lg:gap-12">
 				{/* Header */}
 				<div className="flex flex-col items-start lg:items-center gap-4 lg:gap-6">
-					<SectionBadge text="Что мы делаем" />
+					<SectionBadge text={t("badge")} />
 					<div className="flex flex-col items-start lg:items-center gap-3 lg:gap-4 lg:text-center">
 						<h2 className="font-[var(--font-figtree)] text-[36px] lg:text-[48px] text-[#262b35] lg:text-[#07100b] tracking-[-1.44px] leading-tight">
-							Наши сервисы
+							{t("heading")}
 						</h2>
 						{/* Mobile description (Quicksand, 14px, #07100b) */}
 						<p className="lg:hidden font-[var(--font-quicksand)] text-[14px] text-[#07100b] leading-normal">
-							Мы реализуем комплексные строительные решения для
-							бизнеса — с фокусом на надёжность, контроль и
-							предсказуемый результат.
+							{t("mobileDescription")}
 						</p>
 						{/* Desktop description */}
 						<p className="hidden lg:block font-[var(--font-figtree)] text-[20px] text-[#7a7a7a] tracking-[-0.6px] leading-[1.5] max-w-[762px]">
-							Мы берём на себя весь цикл — от идеи до готового
-							пространства, чтобы результат был целостным и
-							продуманным.
+							{t("desktopDescription")}
 						</p>
 					</div>
 				</div>

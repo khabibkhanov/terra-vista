@@ -1,14 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { IMG_ICON_ARROW, IMG_ICON_MENU } from "@/lib/assets";
-
-const NAV_LINKS = [
-	{ label: "Home", href: "#home" },
-	{ label: "About Us", href: "#about" },
-	{ label: "Projects", href: "#projects" },
-	{ label: "Services", href: "#services" },
-] as const;
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function scrollTo(href: string) {
 	document
@@ -17,7 +12,15 @@ function scrollTo(href: string) {
 }
 
 export default function Header() {
+	const t = useTranslations("header");
 	const [menuOpen, setMenuOpen] = useState(false);
+
+	const NAV_LINKS = [
+		{ label: t("nav.home"), href: "#home" },
+		{ label: t("nav.about"), href: "#about" },
+		{ label: t("nav.projects"), href: "#projects" },
+		{ label: t("nav.services"), href: "#services" },
+	] as const;
 
 	function handleNav(href: string) {
 		setMenuOpen(false);
@@ -32,19 +35,20 @@ export default function Header() {
 					onClick={() => handleNav("#home")}
 					className="font-[var(--font-figtree)] font-semibold text-[#002319] text-[12px] leading-normal cursor-pointer"
 				>
-					Power Trust Building
+					{t("brand")}
 				</button>
 				<div className="flex items-center gap-3">
+					<LanguageSwitcher />
 					<a
 						href="tel:+9989912345667"
 						className="font-[var(--font-figtree)] font-medium text-[#07100b] text-[12px] leading-normal"
 					>
-						+9989912345667
+						{t("phone")}
 					</a>
 					<button
 						onClick={() => setMenuOpen((o) => !o)}
 						className="w-[18px] h-[18px] flex items-center justify-center cursor-pointer"
-						aria-label={menuOpen ? "Close menu" : "Open menu"}
+						aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
 					>
 						{menuOpen ? (
 							<svg
@@ -63,7 +67,7 @@ export default function Header() {
 						) : (
 							<img
 								src={IMG_ICON_MENU}
-								alt="Menu"
+								alt={t("menu")}
 								className="w-full h-full object-contain"
 							/>
 						)}
@@ -94,7 +98,7 @@ export default function Header() {
 							onClick={() => handleNav("#contact")}
 							className="mt-4 w-full bg-[#FF5F3A] text-white font-[var(--font-figtree)] font-semibold text-[14px] py-3 rounded-[34px] hover:bg-[#e54e2a] transition-colors cursor-pointer"
 						>
-							Contact Us
+							{t("contact")}
 						</button>
 					</div>
 				</div>
@@ -107,7 +111,7 @@ export default function Header() {
 						onClick={() => scrollTo("#home")}
 						className="font-[var(--font-montserrat)] font-semibold text-[#f24822] text-2xl whitespace-nowrap cursor-pointer"
 					>
-						Terra Vista
+						{t("brand")}
 					</button>
 
 					<nav className="flex items-center gap-8">
@@ -122,17 +126,20 @@ export default function Header() {
 						))}
 					</nav>
 
-					<button
-						onClick={() => scrollTo("#contact")}
-						className="flex items-center gap-2 bg-[#FF5F3A] border border-[#f05734] text-white font-[var(--font-figtree)] font-semibold text-base leading-6 px-4 py-[10px] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] hover:bg-[#e54e2a] transition-colors cursor-pointer"
-					>
-						<span>Contact Us</span>
-						<img
-							src={IMG_ICON_ARROW}
-							alt=""
-							className="w-5 h-5"
-						/>
-					</button>
+					<div className="flex items-center gap-4">
+						<LanguageSwitcher />
+						<button
+							onClick={() => scrollTo("#contact")}
+							className="flex items-center gap-2 bg-[#FF5F3A] border border-[#f05734] text-white font-[var(--font-figtree)] font-semibold text-base leading-6 px-4 py-[10px] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] hover:bg-[#e54e2a] transition-colors cursor-pointer"
+						>
+							<span>{t("contact")}</span>
+							<img
+								src={IMG_ICON_ARROW}
+								alt=""
+								className="w-5 h-5"
+							/>
+						</button>
+					</div>
 				</div>
 			</header>
 		</>

@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import {
 	IMG_GALLERY_1,
 	IMG_GALLERY_2,
@@ -8,6 +11,8 @@ import {
 } from "@/lib/assets";
 
 export default function Gallery() {
+	const t = useTranslations("gallery");
+
 	return (
 		<section
 			id="projects"
@@ -17,13 +22,10 @@ export default function Gallery() {
 				{/* Header */}
 				<div className="flex flex-col items-center gap-4 lg:gap-6 text-center">
 					<h2 className="font-[var(--font-figtree)] text-[36px] lg:text-[48px] text-[#07100b] tracking-[-1.08px] lg:tracking-[-1.44px] leading-tight">
-						Галерея проектов
+						{t("heading")}
 					</h2>
 					<p className="font-[var(--font-figtree)] text-[16px] lg:text-[20px] text-[#07100b]/70 tracking-[-0.48px] lg:tracking-[-0.6px] leading-[1.5] max-w-[762px]">
-						Здесь представлены реальные объекты, реализованные нашей
-						командой — от частных домов до коммерческих зданий.{" "}
-						Каждый проект — это практическое подтверждение качества,
-						сроков и подхода к работе.
+						{t("description")}
 					</p>
 				</div>
 

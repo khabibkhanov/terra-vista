@@ -1,0 +1,161 @@
+{
+	"header": {
+		"brand": "Terra Vista",
+		"phone": "+9989912345667",
+		"nav": {
+			"home": "Home",
+			"about": "About Us",
+			"projects": "Projects",
+			"services": "Services"
+		},
+		"contact": "Contact Us",
+		"menu": "Menu",
+		"closeMenu": "Close menu",
+		"openMenu": "Open menu"
+	},
+	"hero": {
+		"badge": "85% of clients come through recommendations",
+		"heading": "Creating spaces where you ||highlight||want to live||/highlight||",
+		"description": "Terra Vista is a residential real estate developer with a focus on architecture, ecology, and long-term value.",
+		"cta": "Get a consultation",
+		"desktopCta": "Get a free consultation",
+		"tagline": "Creating exceptional living spaces since 2010.",
+		"floatingCards": [
+			"85% of clients come through recommendations",
+			"40+ architects and engineers on our team",
+			"10+ projects currently in development"
+		]
+	},
+	"about": {
+		"badge": "About the holding",
+		"content": [
+			"Terra Vista is a team of architects, engineers, and developers united by one mission: to create residential spaces that retain their value over time.",
+			"We don’t just build buildings — we shape environments where every detail is thoughtfully considered, from layout to infrastructure and landscaping."
+		]
+	},
+	"stats": {
+		"projects": {
+			"value": "25+",
+			"label": "Completed projects"
+		},
+		"area": {
+			"value": "500+",
+			"label": "thousand m² built"
+		},
+		"timeline": {
+			"value": "98%",
+			"label": "Projects completed on time"
+		},
+		"experience": {
+			"value": "15+",
+			"label": "Years of experience"
+		}
+	},
+	"services": {
+		"badge": "What we do",
+		"heading": "Our services",
+		"mobileDescription": "We deliver comprehensive construction solutions with a focus on reliability, quality control, and predictable results.",
+		"desktopDescription": "We manage the entire process — from concept to finished space — ensuring a cohesive and well-thought-out result.",
+		"items": [
+			{
+				"title": "Residential Project Development",
+				"description": "We create the concept, conduct market analysis, and deliver projects that maintain their value and appeal for years to come."
+			},
+			{
+				"title": "Architectural Design",
+				"description": "We design buildings that harmoniously combine aesthetics, functionality, and environmental integration."
+			},
+			{
+				"title": "Construction Management",
+				"description": "We oversee every stage of construction to ensure adherence to timelines, budget, and the highest quality standards."
+			}
+		]
+	},
+	"approach": {
+		"badge": "Our Approach",
+		"heading": "Our approach",
+		"description": "Every project is a comprehensive system where both the original vision and flawless execution at every stage matter equally.",
+		"steps": [
+			{
+				"num": "1.",
+				"title": "Strategy and Concept",
+				"description": "We start with a thorough analysis of the location, target audience, and project potential."
+			},
+			{
+				"num": "2.",
+				"title": "Design and Detailing",
+				"description": "We develop architectural and engineering solutions that prioritize practicality, aesthetics, and durability."
+			},
+			{
+				"num": "3.",
+				"title": "Implementation and Control",
+				"description": "We maintain full control throughout construction so the final result perfectly matches the original vision without compromise."
+			}
+		]
+	},
+	"gallery": {
+		"heading": "Project Gallery",
+		"description": "Real projects delivered by our team — from private residences to commercial buildings. Each one is living proof of our commitment to quality, timelines, and excellence."
+	},
+	"whyUs": {
+		"badge": "Why choose us",
+		"heading": "Why Terra Vista?",
+		"reasons": [
+			{
+				"num": "01",
+				"title": "Architecture with purpose",
+				"description": "Every project begins with a strong concept rather than just a set of technical solutions."
+			},
+			{
+				"num": "02",
+				"title": "Focus on long-term value",
+				"description": "We design with the future in mind — thinking not only about handover, but about the property’s value in 5–10 years."
+			},
+			{
+				"num": "03",
+				"title": "Full control at every stage",
+				"description": "We never delegate responsibility — we carry it through to the very end."
+			},
+			{
+				"num": "04",
+				"title": "Balance of aesthetics and practicality",
+				"description": "We create spaces that are both beautiful and highly functional."
+			},
+			{
+				"num": "05",
+				"title": "Strong professional team",
+				"description": "Our experienced architects, engineers, and managers deliver complex projects smoothly and efficiently."
+			}
+		]
+	},
+	"location": {
+		"heading": "Our Location",
+		"description": "Our office is located in Tashkent. We are open to collaboration with both private clients and corporate partners.",
+		"contacts": [
+			{
+				"title": "Tashkent",
+				"address": "Tashkent city, Uzbekistan"
+			},
+			{
+				"title": "Phone number",
+				"address": "+998 99 123 45 67"
+			}
+		]
+	},
+	"map": {
+		"loading": "Map is loading…",
+		"popup": {
+			"title": "Terra Vista",
+			"address": "Tashkent city, Uzbekistan"
+		}
+	},
+	"footer": {
+		"description": "Terra Vista is a residential real estate developer focused on architecture, ecology, and long-term project value.",
+		"contactUs": "Contact Us",
+		"address": "Tashkent city, Uzbekistan",
+		"email": "info@terravista.uz",
+		"phone": "+998 99 123 45 67",
+		"followUs": "Follow Us",
+		"copyright": "© 2026 Terra Vista. All rights reserved."
+	}
+}

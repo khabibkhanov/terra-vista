@@ -1,37 +1,17 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { IMG_DOT_WHITE } from "@/lib/assets";
 
-const REASONS = [
-	{
-		num: "01",
-		title: "Архитектура с идеей",
-		description:
-			"Каждый проект имеет концепцию, а не просто набор решений.",
-	},
-	{
-		num: "02",
-		title: "Фокус на долгосрочную ценность",
-		description:
-			"Мы думаем не только о сдаче проекта, но и о его будущем через 5–10 лет.",
-	},
-	{
-		num: "03",
-		title: "Контроль на всех этапах",
-		description: "Мы не передаём ответственность — мы её держим до конца.",
-	},
-	{
-		num: "04",
-		title: "Баланс эстетики и практичности",
-		description: "Мы не передаём ответственность — мы её держим до конца.",
-	},
-	{
-		num: "05",
-		title: "Сильная команда",
-		description:
-			"Опыт архитекторов, инженеров и менеджеров позволяет реализовывать сложные проекты без хаоса.",
-	},
-] as const;
-
-function ReasonCard({ num, title, description }: (typeof REASONS)[number]) {
+function ReasonCard({
+	num,
+	title,
+	description,
+}: {
+	num: string;
+	title: string;
+	description: string;
+}) {
 	return (
 		<div className="bg-white rounded-[24px] flex flex-col justify-between p-4 lg:p-5 h-[203px] lg:h-[283px] flex-1 min-w-0">
 			<p className="font-[var(--font-figtree)] font-semibold text-[64px] text-[rgba(0,35,25,0.4)] text-right tracking-[-1.92px] leading-none">
@@ -50,6 +30,36 @@ function ReasonCard({ num, title, description }: (typeof REASONS)[number]) {
 }
 
 export default function WhyUs() {
+	const t = useTranslations("whyUs");
+
+	const REASONS = [
+		{
+			num: "01",
+			title: t("reasons.0.title"),
+			description: t("reasons.0.description"),
+		},
+		{
+			num: "02",
+			title: t("reasons.1.title"),
+			description: t("reasons.1.description"),
+		},
+		{
+			num: "03",
+			title: t("reasons.2.title"),
+			description: t("reasons.2.description"),
+		},
+		{
+			num: "04",
+			title: t("reasons.3.title"),
+			description: t("reasons.3.description"),
+		},
+		{
+			num: "05",
+			title: t("reasons.4.title"),
+			description: t("reasons.4.description"),
+		},
+	] as const;
+
 	return (
 		<section className="px-4 lg:px-12 py-8 lg:py-8">
 			<div className="max-w-[1344px] mx-auto">
@@ -68,11 +78,11 @@ export default function WhyUs() {
 									className="w-[7px] h-[7px]"
 								/>
 								<span className="font-[var(--font-figtree)] text-[16px] text-white uppercase leading-6">
-									почему выбирают нас
+									{t("badge")}
 								</span>
 							</div>
 							<h2 className="font-[var(--font-figtree)] text-[36px] lg:text-[48px] text-white tracking-[-1.44px] leading-normal">
-								Почему именно мы?
+								{t("heading")}
 							</h2>
 						</div>
 
