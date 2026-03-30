@@ -70,9 +70,12 @@ export default function Footer() {
 									alt=""
 									className="w-[20px] h-[19px]"
 								/>
-								<p className="font-[var(--font-montserrat)] text-[14px] lg:text-[16px] text-white/80">
+								<a 
+									href="mailto:info@terrovista.com"
+									className="font-[var(--font-montserrat)] text-[14px] lg:text-[16px] text-white/80"
+								>
 									{t("email")}
-								</p>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -84,7 +87,10 @@ export default function Footer() {
 						</p>
 						<div className="flex gap-4">
 							{SOCIAL_ICONS.map(({ src, alt, size }) => (
-								<button
+								<a
+									href={alt === "Instagram" ? "https://www.instagram.com" : alt === "LinkedIn" ? "https://www.linkedin.com" : "https://t.me"}
+									target="_blank"
+									rel="noopener noreferrer"
 									key={alt}
 									className="relative w-8 h-8 rounded-[8px] bg-[#FF5F3A] flex items-center justify-center hover:brightness-110 transition-all cursor-pointer"
 									aria-label={alt}
@@ -94,7 +100,7 @@ export default function Footer() {
 										alt={alt}
 										className={`${size} relative z-10 brightness-0 invert`}
 									/>
-								</button>
+								</a>
 							))}
 						</div>
 					</div>
