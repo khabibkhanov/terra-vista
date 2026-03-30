@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import {
 	IMG_GALLERY_1,
@@ -10,8 +11,21 @@ import {
 	IMG_GALLERY_MOBILE_3,
 } from "@/lib/assets";
 
+const DESKTOP_IMAGES = [IMG_GALLERY_1, IMG_GALLERY_2, IMG_GALLERY_3];
+const MOBILE_IMAGES = [
+	IMG_GALLERY_MOBILE_1,
+	IMG_GALLERY_MOBILE_2,
+	IMG_GALLERY_MOBILE_3,
+];
+
 export default function Gallery() {
 	const t = useTranslations("gallery");
+	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+	const getFlexValue = (index: number) => {
+		if (hoveredIndex === null) return index === 2 ? 3 : 1;
+		return hoveredIndex === index ? 3 : 1;
+	};
 
 	return (
 		<section
@@ -29,56 +43,44 @@ export default function Gallery() {
 					</p>
 				</div>
 
-				{/* Desktop gallery: 2 narrow + 1 wide */}
-				<div className="hidden lg:flex gap-2 h-[550px]">
-					<div className="w-[280px] rounded-[20px] overflow-hidden shrink-0">
-						<img
-							src={IMG_GALLERY_1}
-							alt="Project 1"
-							className="w-full h-full object-cover"
-						/>
-					</div>
-					<div className="w-[280px] rounded-[20px] overflow-hidden shrink-0">
-						<img
-							src={IMG_GALLERY_2}
-							alt="Project 2"
-							className="w-full h-full object-cover"
-						/>
-					</div>
-					<div className="flex-1 rounded-[20px] overflow-hidden">
-						<img
-							src={IMG_GALLERY_3}
-							alt="Project 3"
-							className="w-full h-full object-cover"
-						/>
-					</div>
+				{/* Desktop gallery: accordion hover effect */}
+				<div
+					className="hidden lg:flex gap-2 h-[550px]"
+					onMouseLeave={() => setHoveredIndex(null)}
+				>
+					{DESKTOP_IMAGES.map((src, i) => (
+						<div
+							key={i}
+							className="rounded-[20px] overflow-hidden cursor-pointer"
+							style={{
+								flex: getFlexValue(i),
+								transition: "flex 0.5s ease-in-out",
+							}}
+							onMouseEnter={() => setHoveredIndex(i)}
+						>
+							<img
+								src={src}
+								alt={`Project ${i + 1}`}
+								className="w-full h-full object-cover"
+							/>
+						</div>
+					))}
 				</div>
 
-				{/* Mobile gallery: left wide + right 2-stacked */}
-				<div className="lg:hidden flex gap-[4px] h-[300px]">
-					<div className="w-[71%] rounded-[10px] overflow-hidden shrink-0">
-						<img
-							src={IMG_GALLERY_MOBILE_1}
-							alt="Project 1"
-							className="w-full h-full object-cover"
-						/>
-					</div>
-					<div className="flex-1 flex flex-col gap-[4px]">
-						<div className="flex-1 rounded-[10px] overflow-hidden">
+				{/* Mobile gallery: horizontal scroll with snap */}
+				<div className="lg:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mx-4 px-4 scrollbar-hide">
+					{MOBILE_IMAGES.map((src, i) => (
+						<div
+							key={i}
+							className="snap-center shrink-0 w-[82vw] h-[280px] rounded-[16px] overflow-hidden"
+						>
 							<img
-								src={IMG_GALLERY_MOBILE_2}
-								alt="Project 2"
+								src={src}
+								alt={`Project ${i + 1}`}
 								className="w-full h-full object-cover"
 							/>
 						</div>
-						<div className="flex-1 rounded-[10px] overflow-hidden">
-							<img
-								src={IMG_GALLERY_MOBILE_3}
-								alt="Project 3"
-								className="w-full h-full object-cover"
-							/>
-						</div>
-					</div>
+					))}
 				</div>
 			</div>
 		</section>

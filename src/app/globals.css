@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #FF5F3A;
-  --color-text-dark: #07100B;
+	--color-primary: #ff5f3a;
+	--color-text-dark: #07100b;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.scrollbar-hide {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  background: #ffffff;
-  color: #07100B;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background: #ffffff;
+	color: #07100b;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Offset all anchor sections so the fixed header doesn't cover them */
 section[id] {
-  scroll-margin-top: 80px;
+	scroll-margin-top: 80px;
 }

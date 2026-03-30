@@ -21,7 +21,10 @@ export default function Location() {
 	] as const;
 
 	return (
-		<section className="px-4 lg:px-12 py-8">
+		<section
+			id="location"
+			className="px-4 lg:px-12 py-8"
+		>
 			<div className="max-w-[1312px] mx-auto flex flex-col gap-8">
 				{/* Heading + contacts */}
 				<div className="flex flex-col lg:flex-row gap-6 lg:gap-24 py-8">

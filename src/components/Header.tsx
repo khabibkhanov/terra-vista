@@ -95,7 +95,7 @@ export default function Header() {
 							</button>
 						))}
 						<button
-							onClick={() => handleNav("#contact")}
+							onClick={() => handleNav("#location")}
 							className="mt-4 w-full bg-[#FF5F3A] text-white font-[var(--font-figtree)] font-semibold text-[14px] py-3 rounded-[34px] hover:bg-[#e54e2a] transition-colors cursor-pointer"
 						>
 							{t("contact")}
@@ -129,7 +129,7 @@ export default function Header() {
 					<div className="flex items-center gap-4">
 						<LanguageSwitcher />
 						<button
-							onClick={() => scrollTo("#contact")}
+							onClick={() => scrollTo("#location")}
 							className="flex items-center gap-2 bg-[#FF5F3A] border border-[#f05734] text-white font-[var(--font-figtree)] font-semibold text-base leading-6 px-4 py-[10px] rounded-xl shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] hover:bg-[#e54e2a] transition-colors cursor-pointer"
 						>
 							<span>{t("contact")}</span>

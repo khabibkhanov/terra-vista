@@ -114,6 +114,7 @@ export default async function LocaleLayout({
 	return (
 		<html
 			lang={locale}
+			data-scroll-behavior="smooth"
 			className={`${figtree.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} ${quicksand.variable}`}
 		>
 			<body className="antialiased">

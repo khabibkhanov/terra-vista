@@ -16,6 +16,7 @@ export function Providers({
 		<NextIntlClientProvider
 			locale={locale}
 			messages={messages}
+			timeZone="UTC"
 		>
 			{children}
 		</NextIntlClientProvider>

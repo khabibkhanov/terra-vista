@@ -49,7 +49,10 @@ export default function Hero() {
 							{t("heading")
 								.split("||highlight||")
 								.map((part, i) => {
-									const cleanPart = part.replace("||/highlight||", "");
+									const cleanPart = part.replace(
+										"||/highlight||",
+										"",
+									);
 									return i === 1 ? (
 										<span
 											key={i}
@@ -66,9 +69,12 @@ export default function Hero() {
 							{t("description")}
 						</p>
 					</div>
-					<button className="self-start bg-[#FF5F3A] text-white font-[var(--font-figtree)] font-medium text-[12px] tracking-[-0.32px] px-6 py-2 rounded-[34px] hover:bg-[#e54e2a] transition-colors cursor-pointer">
+					<a
+						href="#location"
+						className="self-start bg-[#FF5F3A] text-white font-[var(--font-figtree)] font-medium text-[12px] tracking-[-0.32px] px-6 py-2 rounded-[34px] hover:bg-[#e54e2a] transition-colors cursor-pointer"
+					>
 						{t("cta")}
-					</button>
+					</a>
 				</div>
 			</div>
 
@@ -115,7 +121,10 @@ export default function Hero() {
 									{t("heading")
 										.split("||highlight||")
 										.map((part, i) => {
-											const cleanPart = part.replace("||/highlight||", "");
+											const cleanPart = part.replace(
+												"||/highlight||",
+												"",
+											);
 											return i === 1 ? (
 												<span
 													key={i}
@@ -133,9 +142,12 @@ export default function Hero() {
 								</p>
 							</div>
 							<div className="flex flex-col gap-5 w-[382px]">
-								<button className="w-full bg-[#FF5F3A] text-white font-[var(--font-montserrat)] font-semibold text-base px-8 py-4 rounded-[38px] hover:bg-[#e54e2a] transition-colors cursor-pointer">
+								<a
+									href="#location"
+									className="w-full bg-[#FF5F3A] text-white font-[var(--font-montserrat)] font-semibold text-base px-8 py-4 rounded-[38px] hover:bg-[#e54e2a] transition-colors cursor-pointer text-center"
+								>
 									{t("desktopCta")}
-								</button>
+								</a>
 								<p className="font-[var(--font-poppins)] text-[#07100b] text-base leading-normal">
 									{t("tagline")}
 								</p>
